@@ -1,3 +1,6 @@
+local path = ...
+local tween = require(path .. '/tween')
+
 local splashy = {}
 splashy.list = {}
 splashy.alpha = 255
