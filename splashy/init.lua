@@ -22,6 +22,22 @@ function splashy.addSplash(image, index)
 
 end
 
+function splashy.skipSplash()
+
+	splashy.fadestate = "in"
+
+	splashy.count = splashy.count + 1
+
+end
+
+function splashy.skipAll()
+
+	splashy.fadestate = "in"
+
+	splashy.count = #splashy.list + 1
+
+end
+
 function splashy.draw()
 
 	for i=1, #splashy.list do
