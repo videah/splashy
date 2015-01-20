@@ -9,7 +9,7 @@ To install, extract the splashy folder to somewhere in your project (usually a /
 Then setup your main.lua like this:
 
 ```lua
-splashy = require 'splashy'
+splashy = require 'path/to/splashy/folder'
 
 function love.draw()
 
