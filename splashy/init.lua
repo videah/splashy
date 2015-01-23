@@ -18,8 +18,6 @@ function splashy.addSplash(image, index)
 
 	splashy.list[index] = image
 
-	print(splashy.list[index])
-
 	splashy.tweenlist[index] = tween.new(2, splashy, {inalpha = 255, outalpha = 0})
 
 end
