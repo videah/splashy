@@ -13,10 +13,10 @@ splashy.onCompleteFunction = nil
 
 function splashy.addSplash(image, index)
 
-	if index == nil then index = #splashy.list + 1 end
+	index = index or #splashy.list + 1
 	assert(type(index) == "number", "index must be a number")
 
-	splashy.list[index] = love.graphics.newImage(image)
+	splashy.list[index] = image
 
 	print(splashy.list[index])
 
@@ -31,7 +31,7 @@ function splashy.skipSplash()
 	splashy.count = splashy.count + 1
 
 end
-
+	
 function splashy.skipAll()
 
 	splashy.fadestate = "in"
