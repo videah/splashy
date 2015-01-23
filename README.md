@@ -26,6 +26,9 @@ end
 
 Then you'll have a barebones installation complete!
 
+# Demo
+You can see the code demo of the library [here.](https://github.com/VideahGams/splashyDemo)
+
 # Interface
 
 ## Splash Creation
