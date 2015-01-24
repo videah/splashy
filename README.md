@@ -1,5 +1,3 @@
-# splashy
-
 ![](https://i.imgur.com/9mlZVeT.png)
 
 __splashy__ is a simple and basic library for Love2D, that allows the easy implementation of splash screens to any project.
