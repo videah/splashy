@@ -35,7 +35,7 @@ splashy.onCompleteFunction = nil
 
 function splashy.addSplash(image, duration, index)
 
-	duration = duration
+	duration = duration or 2
 	assert(type(duration) == 'number' and duration > 0, "duration must be a positive number.")
 	
 	index = index or #splashy.list + 1
