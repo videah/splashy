@@ -34,10 +34,11 @@ You can see the code demo of the library [here.](https://github.com/VideahGams/s
 ## Splash Creation
 
 ```lua
-splashy.addSplash(image, index)
+splashy.addSplash(image, duration, index)
 ```
 
 * `image` is a drawable (usually an image) to be drawed in a splash.
+* `duration` is an optional argument, to set how long the image fade will last. It must be a positive number. (default: 2)
 * `index` is an optional argument allowing to set custom splash index number for any reason you would need to do so.
 
 ## On Complete

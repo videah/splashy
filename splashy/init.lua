@@ -33,14 +33,17 @@ splashy.fadestate = "in"
 splashy.finished = false
 splashy.onCompleteFunction = nil
 
-function splashy.addSplash(image, index)
+function splashy.addSplash(image, duration, index)
 
+	duration = duration or 2
+	assert(type(duration) == 'number' and duration > 0, "duration must be a positive number.")
+	
 	index = index or #splashy.list + 1
 	assert(type(index) == "number", "index must be a number")
 
 	splashy.list[index] = image
 
-	splashy.tweenlist[index] = tween.new(2, splashy, {inalpha = 255, outalpha = 0})
+	splashy.tweenlist[index] = tween.new(duration, splashy, {inalpha = 255, outalpha = 0})
 
 end
 
