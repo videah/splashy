@@ -26,7 +26,7 @@ local tween = require(path .. '/tween')
 local splashy = {}
 splashy.list = {}
 splashy.inalpha = 0
-splashy.outalpha = 255
+splashy.outalpha = 1
 splashy.count = 1
 splashy.tweenlist = {}
 splashy.fadestate = "in"
@@ -37,13 +37,13 @@ function splashy.addSplash(image, duration, index)
 
 	duration = duration or 2
 	assert(type(duration) == 'number' and duration > 0, "duration must be a positive number.")
-	
+
 	index = index or #splashy.list + 1
 	assert(type(index) == "number", "index must be a number")
 
 	splashy.list[index] = image
 
-	splashy.tweenlist[index] = tween.new(duration, splashy, {inalpha = 255, outalpha = 0})
+	splashy.tweenlist[index] = tween.new(duration, splashy, {inalpha = 1, outalpha = 0})
 
 end
 
@@ -79,11 +79,11 @@ function splashy.draw()
 
 			if splashy.fadestate == "in" then
 
-				love.graphics.setColor(255, 255, 255, splashy.inalpha)
+				love.graphics.setColor(1, 1, 1, splashy.inalpha)
 
 			elseif splashy.fadestate == "out" then
 
-				love.graphics.setColor(255, 255, 255, splashy.outalpha)
+				love.graphics.setColor(1, 1, 1, splashy.outalpha)
 
 			end
 
@@ -106,7 +106,7 @@ function splashy.draw()
 
 		end
 
-		love.graphics.setColor(255, 255, 255, 255)
+		love.graphics.setColor(1, 1, 1, 1)
 
 	end
 
