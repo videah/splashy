@@ -34,12 +34,14 @@ You can see the code demo of the library [here.](https://github.com/VideahGams/s
 ## Splash Creation
 
 ```lua
-splashy.addSplash(image, duration, index)
+splashy.addSplash(image, duration, index, color, scale)
 ```
 
 * `image` is a drawable (usually an image) to be drawed in a splash.
 * `duration` is an optional argument, to set how long the image fade will last. It must be a positive number. (default: 2)
 * `index` is an optional argument allowing to set custom splash index number for any reason you would need to do so.
+* `color` is an optional argument that will determine the background color of the splash screen
+* `scale` is an optional argument that will affect the final size of the splash screen image
 
 ## On Complete
 
@@ -77,6 +79,15 @@ Whilst this one skips all splashes, running the onComplete function:
 ```lua
 splashy.skipAll()
 ```
+
+## Custom Resolutions
+
+Use this function to set the screen resolution that will be used in the internal calculations. This is useful if you use a screen scaling library, like [push](https://github.com/Ulydev/push) or [TLfres](https://love2d.org/wiki/TLfres).
+
+```lua
+splashy.setScreenSize (width, height)
+```
+
 # Credits
 
 [tween.lua](https://github.com/kikito/tween.lua) is used for the tweening/fading.
